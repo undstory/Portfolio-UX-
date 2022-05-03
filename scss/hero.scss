@@ -1,0 +1,208 @@
+.hero {
+    background-color: $orange;
+    margin: 2rem 2rem 0;
+    height: 100vh;
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    &__toggler {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    
+        &:focus {
+          outline: none;
+        }
+    
+        span {
+          font-size: 3rem;
+          color: $white;
+        }
+      }
+
+      &__toggler {
+        display: none;
+      }
+
+      &__mobile {
+        background-color: $yellow;
+        color: $granat;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        box-shadow: -5px 6px 21px -9px $granat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    
+    
+
+    &__without {
+        background-color: $orange;
+        margin: 2rem 2rem 0;
+        padding-bottom: 3rem;
+        color: $white;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+        position: sticky;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        margin-left: 2rem;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        font-weight: $regular;
+
+        &:hover {
+            border-bottom: 2px solid $white;
+    
+        }
+    }
+
+    &__logo {
+        color: $granat;
+        font-weight: $medium;
+        font-size: 2rem;
+    }
+
+    &__header {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        line-height: 1.6;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+    }
+
+    &__name {
+        font-weight: $regular;
+        color: $granat;
+    }
+
+    &__title, &__subtitle {
+        font-weight: $thin;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: $regular;
+        letter-spacing: 0px;
+    }
+
+    &__text {
+        font-weight: $thin;
+        line-height: 1.1;
+        font-size: 1.8rem;
+        letter-spacing: 0px;
+
+        a {
+            border-bottom: 2px solid $white;
+            cursor: pointer;
+        }
+
+        &:first-of-type {
+            margin-top: 4rem;
+        } 
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        z-index: -1;
+    }
+}
+
+.mobile {
+    &__close {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin: 4rem 0 1rem;
+        align-self: flex-end;
+        padding-right: 5rem;
+    
+        &:focus {
+          outline: none;
+        }
+    
+        span {
+          font-size: 3rem;
+          color: $white;
+        }
+      }
+      &__list {
+        height: 70vh;
+        align-self: flex-start;
+        padding: 8rem 0 8rem 5rem;
+      }
+
+      &__item {
+          margin-bottom: 5rem;
+          text-transform: uppercase;
+      }
+
+      &__link {
+          font-weight: $bold;
+          letter-spacing: 2px;
+          font-size: 1.8rem;
+      }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        &__menu {
+            display: none;
+        }
+
+        &__toggler {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .hero {
+        &__title {
+            font-size: 2.3rem;
+        }
+
+        &__subtitle {
+            font-size: 1.8rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+
+        &__without {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    background-color: $orange;
+    color: $white;
+    margin: 0 2rem 2rem;
+
+    &__icon {
+        background-color: $white;
+        width: 40px;
+        color: $granat;
+        line-height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        transition: .3s ease;
+        margin-left: 1rem;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+
+    &__top, &__down {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0 3rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .footer {
+        margin: 0;
+    }
+}

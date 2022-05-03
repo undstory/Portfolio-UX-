@@ -1,0 +1,173 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    width: 100%;
+    font-family: $regularFont;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: $white;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .main-container {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  h1, h2, h3 {
+      font-weight: 400;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  img {
+    display: block;
+  }
+  
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .btn {
+      @include btn;
+  }
+
+  .scroll-indicator {
+    width: 26px;
+    height: 40px;
+    border: 2px solid $granat;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0px 0px 35px -5px $granat;
+}
+  
+.scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: .5em;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: $granat;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    animation: scrollAnim 1.8s .5s infinite ease-in;
+    box-shadow: 0px 0px 35px -5px rgba(70, 255, 224, 0.781);
+}
+  
+/* Animation */
+@keyframes scrollAnim {
+    0% {
+      transform: translate(-50%, 0) rotateX(0);
+      opacity: 0;
+    }
+  
+    5% {
+      opacity: .5;
+    }
+  
+    15% {
+      opacity: 1;
+    }
+  
+    90%,
+    100% {
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(-50%, 30px) rotateX(30deg);
+    }
+}
+/* Animation */
+
+.active {
+    border-bottom: 2px solid $granat;
+}
+
+.top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    background-color: $granat;
+    width: 40px;
+    height: 40px;
+    color: $white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid $granat;
+    font-weight: $bold;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+
+  
+
+    &:hover {
+        background-color: transparent;
+        color: $granat;
+    }
+}
+
+.show-top-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.number {
+  background-color: $granat;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: $white;
+  margin: 2rem 0;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.link {
+  border-bottom: 2px solid $white;
+  cursor: pointer;
+}
+
+.hiddens {
+  visibility: collapse;
+  opacity: 0;
+  transition: visibility .3s, opacity .3s linear;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}

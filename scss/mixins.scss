@@ -1,0 +1,27 @@
+@mixin btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: $white;
+    color: $orange;
+    border: 2px solid $white;
+    transition: .5s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: $white;
+    }
+}
+
+@mixin  title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: $medium;
+}
+
+@mixin center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,121 @@
+.projects {
+    color: $granat;
+
+    &__title {
+        @include title;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+  &__wrapper {
+      display: flex;
+      flex-direction: column;
+  }
+
+  &__project {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      height: 500px;
+      margin-bottom: 2rem;
+    }
+
+    &__text {
+        width: 50%;
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-left: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    &__header, &__body {
+        margin-bottom: 2rem;
+    }
+
+    &__body {
+        width: 80%;
+        line-height: 1.4;
+    }
+
+    &__1 {
+        background-color: $granat;
+        color: $white;
+    }
+
+    &__2 {
+        background-color: $yellow;
+
+        p {
+            font-weight: $medium;
+        }
+    }
+
+    &__3 {
+        background-color: $granat;
+        color: $white;
+    }
+
+    &__mockup { 
+
+        &--1 {
+            background-image: url("../assets/smartmockups_l2g1j0i6.jpg");
+        }
+
+        &--2 {
+            background-color: $orange;
+            background-image: url("../assets/smartmockups_l2g1asha.jpg");
+        }
+
+        &--3 {
+            background-color: $littleOrange;
+            background-image: url("../assets/smartmockups_l2g1mvmi.jpg");
+        }
+       
+        background-position: center center;
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__body {
+        font-weight: $regular;
+    }
+
+    &__btn {
+        @include btn;
+    }
+}
+
+@media (max-width: 767px){
+    .projects {
+        &__project {
+            flex-direction: column;
+            height: 1000px;
+        }
+
+        &__text {
+            width: 100%;
+            margin: 0 2rem;
+        }
+
+        &__mockup {
+            width: 100%;
+
+            &--2 {
+                order: 4;
+                background-size: contain;
+            }
+
+            &--3 {
+                background-size: contain;
+            }
+        }
+
+    }
+}

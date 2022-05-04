@@ -120,6 +120,17 @@
         }
     }
 
+    &__paragraph {
+        max-width: 50%;
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+
+    &__image {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     // &__box {
     //     width: 30%;
     //     line-height: 1.6;
@@ -197,6 +208,10 @@
         }
         &__head {
             padding-top: 0;
+        }
+
+        &__table {
+            padding: 0;
         }
     }
 }

@@ -58,6 +58,8 @@
         img {
             width: 60%;
         }
+
+     
     }
 
     &__list {
@@ -151,6 +153,12 @@
             height: 300px;
             width: 400px;
         }
+
+        &__intro {
+            &--frames {
+                max-width: 100%;
+            }
+        }
     }
 }
 
@@ -179,6 +187,15 @@
         }
         &__intro {
             max-width: 100%;
+
+            &--frames {
+                flex-wrap: wrap;
+
+                img {
+                    width: 80%;
+                }
+            }
+
         }
         &__list {
             flex-direction: column;
@@ -202,6 +219,14 @@
             flex-wrap: wrap;
             gap: 2rem;
 
+            &--frames {
+            padding: 0 4rem;
+
+            img {
+                width: 95%;
+            }
+            }
+
             & .project__box:last-child {
                 margin-bottom: 2rem;
             }
@@ -212,6 +237,16 @@
 
         &__table {
             padding: 0;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .project {
+        &__image {
+            &--dw {
+                display: none;
+            }
         }
     }
 }

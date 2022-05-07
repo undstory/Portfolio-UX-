@@ -1,6 +1,6 @@
 .hero {
     background-color: $orange;
-    margin: 2rem 2rem 0;
+    margin: 2rem auto 0;
     height: 100vh;
     color: $white;
     position: relative;
@@ -44,7 +44,7 @@
 
     &__without {
         background-color: $orange;
-        margin: 2rem 2rem 0;
+        margin: 2rem auto 0;
         padding-bottom: 3rem;
         color: $white;
     }

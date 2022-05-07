@@ -208,6 +208,10 @@
             }
 
         }
+
+        &__head {
+            padding-bottom: 2rem;
+        }
         &__list {
             flex-direction: column;
             justify-content: center;

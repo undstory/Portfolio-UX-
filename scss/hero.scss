@@ -1,10 +1,12 @@
 .hero {
     background-color: $orange;
     margin: 2rem auto 0;
-    height: 100vh;
+    min-height: 100vh;
     color: $white;
     position: relative;
     z-index: 1;
+
+
 
     &__toggler {
         background-color: transparent;
@@ -97,6 +99,7 @@
         align-items: center;
         z-index: -1;
     }
+
 
     &__name {
         font-weight: $regular;

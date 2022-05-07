@@ -1,0 +1,36 @@
+.about {
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__illustration {
+        display: inline-block; 
+        width: 200px;
+        padding: 5rem 2rem;
+  }
+
+  &__description {
+      width: 60%;
+      margin: 3rem 0 2rem;
+      line-height: 1.6;
+      text-align: center;
+
+      &--border {
+          border-bottom: 3px solid $white;
+      }
+  }
+}
+
+@media (max-width: 520px) {
+    .about {
+        &__description {
+            width: 90%;
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.project2 {
+    &__images {
+        display: flex;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            &:first-child {
+            width: 60%;
+        }
+    }
+        img {
+            &:last-child {
+            width: 30%;
+        }
+    }
+}
+}
+
+@media (max-width: 520px) {
+    .project2 {
+        &__images {
+            display: flex;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                &:first-child {
+                width: 100%;
+            }
+        }
+            img {
+                &:last-child {
+                width: 80%;
+            }
+        }
+    }
+    }
+}
+
+   
+
